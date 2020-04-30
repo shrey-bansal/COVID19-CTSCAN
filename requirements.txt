@@ -1,0 +1,10 @@
+flask
+gunicorn==19.9.0
+joblib==0.14.1
+Keras==2.3.1
+Keras-Applications==1.0.8
+Keras-Preprocessing==1.1.0
+numpy==1.16.3
+opencv-python-headless==4.2.0.32
+pickle-mixin==1.0.2
+tensorflow==2.1.0
