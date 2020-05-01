@@ -43,7 +43,7 @@ app = Flask(__name__, template_folder='templates')
 
 @app.route('/')
 def home_endpoint():
-    return redirect('/upload')
+    return redirect('/upload-image')
 
 
 @app.route("/upload-image", methods=["GET", "POST"])
