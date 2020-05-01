@@ -7,5 +7,5 @@
 
 <h3>Deployment</h3>
 
-<p> [COVID19-CTSCAN](https://covid19-ctscan.herokuapp.com/) </p>
+[COVID19-CTSCAN](https://covid19-ctscan.herokuapp.com/)
 
