@@ -11,4 +11,6 @@
 <li> pip install -r requirements.txt </li>
 <li> python app.py </li>
 
+<h3>Youtube : </h3>
 
+[Link](https://youtu.be/38ye9ZCvuQY)
