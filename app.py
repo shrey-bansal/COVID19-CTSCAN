@@ -8,7 +8,7 @@ import pickle as pk
 from joblib import dump, load
 import datetime
 from flask import Flask
-from flask import render_template, request, redirect
+from flask import render_template, request, redirect, flash, url_for
 import os
 
 def preprocess_input_custom(img1):
@@ -51,6 +51,14 @@ def upload_image():
     if request.method == "POST":
         if request.files:
             image = request.files["image"]
+            filename = image.filename
+            filename = filename.lower()
+            jpg = filename.find('jpg')
+            jpeg = filename.find('jpeg')
+            png = filename.find('png')
+            if(jpg==-1 and jpeg==-1 and png==-1):
+                flash('Image format should be "png", "jpg" or "jpeg"')
+                return redirect(url_for('home_endpoint'))
             answer = predict(image)
             print("Image saved")
             if(answer==0):
@@ -63,6 +71,7 @@ def upload_image():
 
 if __name__ == '__main__':
     # load_model()
+    app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
     app.debug = True
     app.config["IMAGE_UPLOADS"] = "Test/class1"
     app.run(threaded=False,debug=False)

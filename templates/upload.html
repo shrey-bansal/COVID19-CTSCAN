@@ -11,6 +11,16 @@
 </head>
 <body style="background-color: #e1e1fc">
 
+  {% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <ul>
+               {% for message in messages %}
+               <li>{{ message }}</li>
+               {% endfor %}
+            </ul>
+         {% endif %}
+      {% endwith %}
+
 <nav class="navbar navbar-expand-md navbar-dark bg-primary">
     <a href="#" class="navbar-brand">COVID-19 CT Screen</a>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -34,7 +44,7 @@
   <div class="container">
     <h1 class="display-4">COVID-19 CT Screen</h1>
     <p class="lead">An AI based model to predict if a CT Scan is COVID-19 positive or not. The model is trained over
-      1000s of real pateint's images</p>
+      1000s of real patient's images</p>
   </div>
 </div>
 
@@ -57,6 +67,49 @@
 </div>
 </div>
 </div>
+
+
+<div class="card text-white bg-primary mt-4 mb-3 ml-5" style="max-width: 45rem;">
+  <div class="card-header"><h5>Download sample COVID-19 Images</h5></div>
+  <div class="card-body">
+    <p>Click on the image to download it:<p>
+    <a href="static/covid-1.png" download="covid-1.png">
+      <img src="static/covid-1.png" alt="W3Schools" width="150" height="150">
+    </a>
+    <a href="static/covid-2.png" download>
+      <img src="static/covid-2.png" alt="W3Schools" width="150" height="150">
+    </a>
+    <a href="static/covid-3.png" download>
+      <img src="static/covid-3.png" alt="W3Schools" width="150" height="150">
+    </a>
+    <a href="static/covid-4.png" download>
+      <img src="static/covid-4.png" alt="W3Schools" width="150" height="150">
+    </a>
+  </div>
+</div>
+
+<div class="card text-white bg-primary mt-4 mb-3 ml-5" style="max-width: 45rem;">
+  <div class="card-header"><h5>Download sample non-COVID-19 Images</h5></div>
+  <div class="card-body">
+    <p>Click on the image to download it:<p>
+    <p>Left to Right image is of Healthy, Healthy, Pneumonia, Tuberculosis Patient</p>
+    <a href="static/non_covid-1.png" download>
+      <img src="static/non_covid-1.png" alt="W3Schools" width="150" height="150">
+    </a>
+    <a href="static/non_covid-2.png" download>
+      <img src="static/non_covid-2.png" alt="W3Schools" width="150" height="150">
+    </a>
+    <a href="static/non_covid-3.png" download>
+      <img src="static/non_covid-3.png" alt="W3Schools" width="150" height="150">
+    </a>
+    <a href="static/non_covid-4.png" download>
+      <img src="static/non_covid-4.png" alt="W3Schools" width="150" height="150">
+    </a>
+  </div>
+</div>
+
+
+
 
 <div class="container">
   <div class="row">
@@ -102,6 +155,20 @@
     </blockquote>
   </div>
 </div>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <a href="#" class="navbar-brand">Developed by : </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+            <a href="http://www.cse.iitd.ac.in/~cs1180389/" class="nav-item nav-link active">Shrey Bansal</a>
+            <a href="https://github.com/MukulSingh105" class="nav-item nav-link active">Mukul Singh</a>
+        </div>
+    </div>
+</nav>
 
 <script>
 // Add the following code if you want the name of the file appear on select
