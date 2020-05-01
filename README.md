@@ -1,6 +1,6 @@
 # COVID19-CTSCAN
 
-<h3>Deployment</h3>
+<h3>Deployment : </h3>
 
 [COVID19-CTSCAN](https://covid19-ctscan.herokuapp.com/)
 
